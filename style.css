@@ -17,6 +17,7 @@ body {
     height: 75vmin;
     flex: auto;
     background-color: white;
+    margin-top: 30px;
 }
 
 .row {
@@ -29,11 +30,6 @@ body {
     background-color: hsl(0, 0%, 100%);
 }
 
-.hovered {
-    background-color: rgb(109, 109, 109);
-}
-
-#resize {
-    margin-bottom: 30px;
-    margin-top: 30px;
+button {
+    margin: 10px;
 }

@@ -1,7 +1,22 @@
+let randomColors = false;
+let opaqueColors = true;
+let gridSize = 16;
+
 function onCellHover(event) {
     const target = event.target;
-    target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-    target.style.opacity = +target.style.opacity + 0.1;
+    let color;
+
+    if (randomColors) {
+        color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+        color = "black";
+    }
+
+    if (!opaqueColors) {
+        target.style.opacity = +target.style.opacity + 0.1;
+    }
+
+    target.style.backgroundColor = color;
     console.log(target.style.opacity);
 }
 
@@ -22,7 +37,6 @@ function initGrid(gridSize) {
         for (let j = 0; j < gridSize; j++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
-            cell.style.opacity = 0;
             cell.addEventListener("mouseenter", onCellHover);
             row.appendChild(cell);
         }
@@ -39,5 +53,11 @@ function removeGrid() {
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#resize").addEventListener("click", onResize);
-    initGrid(16);
+    document.querySelector("#random").addEventListener("click", () => {
+        randomColors = !randomColors;
+    });
+    document.querySelector("#opaque").addEventListener("click", () => {
+        opaqueColors = !opaqueColors;
+    });
+    initGrid(gridSize);
 })
