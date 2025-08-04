@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: rgb(170, 170, 170);
+    margin: 20px 50px;
 }
 
 .container {
@@ -17,7 +18,9 @@ body {
     height: 75vmin;
     flex: auto;
     background-color: white;
-    margin-top: 30px;
+    border: 2px solid black;
+    box-shadow: 10px 10px lightslategray;
+    margin-bottom: 20px;
 }
 
 .row {
@@ -32,4 +35,21 @@ body {
 
 button {
     margin: 10px;
+    box-shadow: 4px 4px lightslategray;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1 {
+    font-family: "Just Me Again Down Here";
+    font-size: 55px;
+    text-shadow: 4px 2px lightslategray;
+    margin-top: 0;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    align-content: center;
 }
