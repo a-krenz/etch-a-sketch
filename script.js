@@ -4,11 +4,8 @@ function onCellHover(event) {
 }
 
 function onResize() {
-    const newSize = +prompt("Insert desired grid size");
-
-    if (newSize > 100) {
-        newSize = 100;
-    }
+    const newSize = Math.min(+prompt("Insert desired grid size"), 100);
+    console.log(newSize);
 
     removeGrid();
     initGrid(newSize);
