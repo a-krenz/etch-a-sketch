@@ -23,4 +23,6 @@ function initGrid() {
     }
 }
 
-initGrid();
+document.addEventListener("DOMContentLoaded", () => {
+    initGrid();
+})
