@@ -16,6 +16,7 @@ body {
     width: 75vmin;
     height: 75vmin;
     flex: auto;
+    background-color: white;
 }
 
 .row {

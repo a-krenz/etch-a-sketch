@@ -1,11 +1,12 @@
 function onCellHover(event) {
     const target = event.target;
     target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    target.style.opacity = +target.style.opacity + 0.1;
+    console.log(target.style.opacity);
 }
 
 function onResize() {
     const newSize = Math.min(+prompt("Insert desired grid side length"), 100);
-    console.log(newSize);
 
     removeGrid();
     initGrid(newSize);
@@ -21,6 +22,7 @@ function initGrid(gridSize) {
         for (let j = 0; j < gridSize; j++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
+            cell.style.opacity = 0;
             cell.addEventListener("mouseenter", onCellHover);
             row.appendChild(cell);
         }
