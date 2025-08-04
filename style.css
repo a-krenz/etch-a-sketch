@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(170, 170, 170);
 }
 
 .container {
@@ -24,7 +25,7 @@ body {
 
 .cell {
     flex: auto;
-    background-color: rgb(181, 181, 181);
+    background-color: hsl(0, 0%, 100%);
 }
 
 .hovered {
@@ -33,4 +34,5 @@ body {
 
 #resize {
     margin-bottom: 30px;
+    margin-top: 30px;
 }

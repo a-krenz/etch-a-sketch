@@ -1,6 +1,6 @@
 function onCellHover(event) {
     const target = event.target;
-    target.classList.add("hovered");
+    target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
 }
 
 function onResize() {
